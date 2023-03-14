@@ -1,0 +1,39 @@
+{
+  "eslint.experimental.useFlatConfig": true,
+  "eslint.format.enable": true,
+  "eslint.lintTask.enable": true,
+  "eslint.options": {"overrideConfigFile": "./eslint.config.mjs"},
+  "eslint.runtime": "C:\\Program Files\\nodejs\\node.exe",
+  "eslint.packageManager": "pnpm",
+    // Scans builtin modules as well
+  "node-module-intellisense.scanBuiltinModules": true,
+
+  // Scans devDependencies as well
+  "node-module-intellisense.scanDevDependencies": true,
+
+  // Scans file modules as well
+  "node-module-intellisense.scanFileModules": true,
+
+  /**
+   * Scans alternative module paths (eg. Search on ${workspcaceRoot}/lib).
+   * Useful when using packages like (https://www.npmjs.com/package/app-module-path) to manage require paths folder.
+   **/
+  "node-module-intellisense.modulePaths": [],
+
+  // File module extensions
+  "node-module-intellisense.autoStripExtensions": [
+    ".js", ".jsx", ".ts", ".d.ts", ".tsx", ".vue", ".json"
+  ],
+  "[less]"      : {"editor.defaultFormatter": "esbenp.prettier-vscode"},
+  "[javascript]": {"editor.defaultFormatter": "esbenp.prettier-vscode"},
+  "[css]"       : {"editor.defaultFormatter": "esbenp.prettier-vscode"},
+  "[sass]"      : {"editor.defaultFormatter": "esbenp.prettier-vscode"},
+  "[scss]"      : {"editor.defaultFormatter": "esbenp.prettier-vscode"},
+  "[json]": {"editor.defaultFormatter": "esbenp.prettier-vscode"},
+  "htmlhint.documentSelector": ["html", "htm", "!template.html"],
+  "editor.defaultFormatter": null,
+  "editor.formatOnPaste": false, // required
+  "editor.formatOnType": false, // required
+  "editor.formatOnSave": false,
+  "npm.executable.path": "C:\\Program Files\\nodejs\\node.exe"
+}

@@ -22,3 +22,6 @@ trim_trailing_whitespace = false
 
 [*.svg]
 insert_final_newline = false
+
+[.vscode/*]
+end_of_line = crlf
