@@ -10,8 +10,9 @@ test('lib.htmlminifier() - no objects', () => {
     const fn = htmlminifier();
     const objs = [];
 
-    return fn(objs).then(val => {
-        assert.deep_equal(val, []);
+    return fn(objs).then(async val => {
+        console.log({soup2: await val});
+        assert.deep_equal(await val, []);
     });
 });
 
@@ -21,8 +22,9 @@ test('lib.htmlminifier() - empty', () => {
     const expected = '';
     const objs = [{source: 'a.html', content}];
 
-    return fn(objs).then(val => {
-        assert.deep_equal(val, [{source: 'a.html', content: expected}]);
+    return fn(objs).then(async val => {
+        console.log({soup2: await val});
+        assert.deep_equal(await val, [{source: 'a.html', content: expected}]);
     });
 });
 
@@ -32,7 +34,8 @@ test('lib.htmlminifier() - whitespace', () => {
     const expected = '<p>   </p>';
     const objs = [{source: 'a.html', content}];
 
-    return fn(objs).then(val => {
-        assert.deep_equal(val, [{source: 'a.html', content: expected}]);
+    return fn(objs).then(async val => {
+        console.log({soup2: await val});
+        assert.deep_equal(await val, [{source: 'a.html', content: expected}]);
     });
 });

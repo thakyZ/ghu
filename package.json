@@ -11,10 +11,13 @@
   },
   "scripts": {
     "lint": "eslint .",
+    "test-debug": "node --nolazy --inspect-brk=5858 test",
     "test": "node test",
     "cover": "nyc --require @babel/register --reporter text --reporter html node test",
     "check": "npm run -s lint && npm run -s test",
-    "precommit": "npm run -s check"
+    "precommit": "npm run -s check",
+    "check-debug": "npm run -s lint && npm run -s test-debug",
+    "precommit-debug": "npm run -s check-debug"
   },
   "main": "lib/ghu.js",
   "dependencies": {
@@ -25,6 +28,7 @@
     "chalk": "5.1.2",
     "commander": "9.4.1",
     "cssmin": "0.4.3",
+    "cssnano": "^5.1.15",
     "dateformat": "5.0.3",
     "glob": "8.0.3",
     "htmlnano": "^2.0.3",
@@ -35,6 +39,7 @@
     "mkdirp": "1.0.4",
     "pug": "3.0.2",
     "rimraf": "3.0.2",
+    "svgo": "^2.8.0",
     "uglify-js": "3.17.3",
     "watch": "0.13.0",
     "webpack": "^5.76.1"
